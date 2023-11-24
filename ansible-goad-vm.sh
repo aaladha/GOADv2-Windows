@@ -18,7 +18,7 @@ apt-get -y autoupdate
 
 # Download GOAD
 cd /opt
-git clone https://github.com/Orange-Cyberdefense/GOAD goad
+git clone https://github.com/aaladha/GOAD
 
 #Install Python PIP
 apt-get install git -y
