@@ -35,12 +35,14 @@ pip install pywinrm
 ansible-galaxy install -r requirements.yml
 
 # Launch provisioning with Ansible
+cd /opt/goad/ansible
 export ANSIBLE_COMMAND="ansible-playbook -i ../ad/GOAD/data/inventory -i ../ad/GOAD/providers/virtualbox/inventory"
+../scripts/provisionning.sh
 
 # Configure VMs
-echo "Wait some minutes for VMs to settle, then configure them:"
-echo .
 echo "Run these commands:"
 echo "# cd /opt/goad/ansible"
 echo "# export ANSIBLE_COMMAND="ansible-playbook -i ../ad/GOAD/data/inventory -i ../ad/GOAD/providers/virtualbox/inventory"
-echo "# ansible-playbook -i ../ad/GOAD/data/inventory -i ../ad/GOAD/providers/vmware/inventory main.yml "
+echo "# ansible-playbook -i ../ad/GOAD/data/inventory -i ../ad/GOAD/providers/vmware/inventory main.yml"
+echo "OR the export then this command below"
+echo "# ../scripts/provisionning.sh"
