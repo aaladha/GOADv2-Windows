@@ -20,7 +20,12 @@ apt-get -y autoupdate
 cd /opt
 git clone https://github.com/Orange-Cyberdefense/GOAD goad
 
-# Set up prerequisites, not doing a venv but could be changed to that
+#Install Python PIP
+apt-get install git -y
+sudo apt install python3-pip -y
+pip3 --version
+
+# Set up prerequisites
 cd /opt/goad/ansible
 pip install --upgrade pip
 pip install ansible-core==2.12.6
@@ -29,9 +34,13 @@ pip install pywinrm
 # Install stuff needed for Ansible
 ansible-galaxy install -r requirements.yml
 
+# Launch provisioning with Ansible
+export ANSIBLE_COMMAND="ansible-playbook -i ../ad/GOAD/data/inventory -i ../ad/GOAD/providers/virtualbox/inventory"
+
 # Configure VMs
 echo "Wait some minutes for VMs to settle, then configure them:"
 echo .
 echo "Run these commands:"
 echo "# cd /opt/goad/ansible"
-echo "# ansible-playbook main.yml"
+echo "# export ANSIBLE_COMMAND="ansible-playbook -i ../ad/GOAD/data/inventory -i ../ad/GOAD/providers/virtualbox/inventory"
+echo "# ansible-playbook -i ../ad/GOAD/data/inventory -i ../ad/GOAD/providers/vmware/inventory main.yml "
