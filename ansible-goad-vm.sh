@@ -16,14 +16,16 @@ apt-get update
 # Make sure we're running on latest versions of things installed
 apt-get -y autoupdate
 
-# Download GOAD
-cd /opt
-git clone https://github.com/aaladha/GOAD
-
 #Install Python PIP
 apt-get install git -y
 sudo apt install python3-pip -y
 pip3 --version
+
+
+# Download GOAD
+cd /opt
+git clone https://github.com/aaladha/GOAD
+
 
 # Set up prerequisites
 cd /opt/goad/ansible
