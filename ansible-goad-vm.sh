@@ -34,12 +34,10 @@ pip install ansible-core==2.12.6
 pip install pywinrm
 
 # Install stuff needed for Ansible
-ansible-galaxy install -r requirements.yml
+ansible-galaxy install -r /opt/goad/ansible/requirements.yml
 
 # Launch provisioning with Ansible
-cd /opt/goad/ansible
-export ANSIBLE_COMMAND="ansible-playbook -i ../ad/GOAD/data/inventory -i ../ad/GOAD/providers/virtualbox/inventory"
-../scripts/provisionning.sh
+cd /opt/goad/ansible && export ANSIBLE_COMMAND="ansible-playbook -i ../ad/GOAD/data/inventory -i ../ad/GOAD/providers/virtualbox/inventory" && ../scripts/provisionning.sh
 
 # Configure VMs
 echo "Run these commands:"
