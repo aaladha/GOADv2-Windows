@@ -33,7 +33,5 @@ pip install --upgrade pip && pip install ansible-core==2.12.6 && pip install pyw
 ansible-galaxy install -r /opt/goad/ansible/requirements.yml
 
 # Launch provisioning with Ansible
-#cd /opt/goad/ansible && export ANSIBLE_COMMAND="ansible-playbook -i ../ad/GOAD/data/inventory -i ../ad/GOAD/providers/vmware/inventory" && ../scripts/provisionning.sh
-export ANSIBLE_COMMAND="ansible-playbook -i /opt/goad/ad/GOAD/data/inventory -i /opt/goad/ad/GOAD/providers/vmware/inventory" && ../scripts/provisionning.sh  
-
-
+export ANSIBLE_COMMAND="ansible-playbook -i /opt/goad/ad/GOAD/data/inventory -i /opt/goad/ad/GOAD/providers/vmware/inventory"
+/opt/goad//scripts/provisionning.sh
