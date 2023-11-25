@@ -34,12 +34,6 @@ ansible-galaxy install -r /opt/goad/ansible/requirements.yml
 
 # Launch provisioning with Ansible
 #cd /opt/goad/ansible && export ANSIBLE_COMMAND="ansible-playbook -i ../ad/GOAD/data/inventory -i ../ad/GOAD/providers/vmware/inventory" && ../scripts/provisionning.sh
-export ANSIBLE_COMMAND="ansible-playbook -i /opt/goad/ad/GOAD/data/inventory -i /opt/goad/ad/GOAD/providers/vmware/inventory && ../scripts/provisionning.sh"  
+export ANSIBLE_COMMAND="ansible-playbook -i /opt/goad/ad/GOAD/data/inventory -i /opt/goad/ad/GOAD/providers/vmware/inventory" && ../scripts/provisionning.sh  
 
-# Configure VMs
-echo "Run these commands:"
-echo "# cd /opt/goad/ansible"
-echo "# export ANSIBLE_COMMAND="ansible-playbook -i ../ad/GOAD/data/inventory -i ../ad/GOAD/providers/virtualbox/inventory"
-echo "# ansible-playbook -i ../ad/GOAD/data/inventory -i ../ad/GOAD/providers/vmware/inventory main.yml"
-echo "OR the export then this command below"
-echo "# ../scripts/provisionning.sh"
+
