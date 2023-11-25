@@ -23,7 +23,7 @@ pip3 --version
 
 
 # Download GOAD
-cd /opt && git clone https://github.com/aaladha/GOAD goad
+git clone https://github.com/aaladha/GOAD /opt/goad
 
 
 # Set up prerequisites
