@@ -23,15 +23,11 @@ pip3 --version
 
 
 # Download GOAD
-cd /opt
-git clone https://github.com/aaladha/GOAD goad
+cd /opt && git clone https://github.com/aaladha/GOAD goad
 
 
 # Set up prerequisites
-cd /opt/goad/ansible
-pip install --upgrade pip
-pip install ansible-core==2.12.6
-pip install pywinrm
+pip install --upgrade pip && pip install ansible-core==2.12.6 && pip install pywinrm
 
 # Install stuff needed for Ansible
 ansible-galaxy install -r /opt/goad/ansible/requirements.yml
